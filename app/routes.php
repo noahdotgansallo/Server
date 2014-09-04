@@ -11,7 +11,11 @@
 |
 */
 
-Route::get('/', function()
-{
-	return View::make('hello');
-});
+Route::any('/create/owner', 'OwnerController@createOwner');
+Route::any('/create/zombie/{owner_id}', 'ZombieController@createZombie');
+
+Route::any('/delete/owner', 'OwnerController@deleteOwner');
+Route::any('/delete/zombie', 'ZombieController@deleteZombie');
+
+Route::any('/view/owners', 'OwnerController@viewOwners');
+Route::any('/view/zombies/{owner_id}', 'ZombieController@viewZombies');
