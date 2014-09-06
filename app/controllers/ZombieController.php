@@ -24,7 +24,7 @@ class ZombieController extends BaseController {
 	{
 		$id = Input::get('id');
 
-		$zombie = Owner::find($id);
+		$zombie = Zombie::find($id);
 		$zombie->delete();
 
 		return 'Deleted';
