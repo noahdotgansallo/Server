@@ -6,6 +6,7 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    'AddCommandDidRun' => $baseDir . '/app/database/migrations/2014_09_07_155437_add_command_did_run.php',
     'AddTimestamps' => $baseDir . '/app/database/migrations/2014_09_04_174935_add_timestamps.php',
     'BaseController' => $baseDir . '/app/controllers/BaseController.php',
     'Boris\\Boris' => $vendorDir . '/d11wtq/boris/lib/Boris/Boris.php',
@@ -30,6 +31,7 @@ return array(
     'ClassPreloader\\Parser\\FileVisitor' => $vendorDir . '/classpreloader/classpreloader/src/ClassPreloader/Parser/FileVisitor.php',
     'ClassPreloader\\Parser\\NodeTraverser' => $vendorDir . '/classpreloader/classpreloader/src/ClassPreloader/Parser/NodeTraverser.php',
     'Command' => $baseDir . '/app/models/Command.php',
+    'CommandController' => $baseDir . '/app/controllers/CommandController.php',
     'CreateZombieTable' => $baseDir . '/app/database/migrations/2014_09_03_235146_create_zombie_table.php',
     'Credential' => $baseDir . '/app/models/Credential.php',
     'CredentialController' => $baseDir . '/app/controllers/CredentialController.php',

