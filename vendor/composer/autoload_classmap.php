@@ -48,6 +48,7 @@ return array(
     'Crypt_Twofish' => $vendorDir . '/phpseclib/phpseclib/phpseclib/Crypt/Twofish.php',
     'DatabaseSeeder' => $baseDir . '/app/database/seeds/DatabaseSeeder.php',
     'EditCommandsTable' => $baseDir . '/app/database/migrations/2014_09_06_195459_edit_commands_table.php',
+    'EditZombieTable' => $baseDir . '/app/database/migrations/2014_09_28_205147_edit_zombie_table.php',
     'File_ANSI' => $vendorDir . '/phpseclib/phpseclib/phpseclib/File/ANSI.php',
     'File_ASN1' => $vendorDir . '/phpseclib/phpseclib/phpseclib/File/ASN1.php',
     'File_ASN1_Element' => $vendorDir . '/phpseclib/phpseclib/phpseclib/File/ASN1.php',

@@ -8,14 +8,19 @@ class ZombieController extends BaseController {
 		$hostname = Input::get('hostname');
 		$auth_key = Input::get('authentication_key');
 		$os_version = Input::get('os_version');
+		$mac = Input::get('mac');
 
-		$zombie = new Zombie;
-		$zombie->ip = $ip;
-		$zombie->hostname = $hostname;
-		$zombie->authentication_key = $auth_key;
-		$zombie->os_version = $os_version;
-		$zombie->owner_id = $owner_id;
-		$zombie->save();
+		$zombie = Zombie::where('mac', '=', $mac)->first();
+		if (is_null($zombie)) {
+			$zombie = new Zombie;
+			$zombie->ip = $ip;
+			$zombie->hostname = $hostname;
+			$zombie->authentication_key = $auth_key;
+			$zombie->os_version = $os_version;
+			$zombie->owner_id = $owner_id;
+			$zombie->mac = $mac;
+			$zombie->save();
+		}
 
 		return $zombie->id;
 	}

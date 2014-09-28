@@ -7,11 +7,16 @@ class UserController extends BaseController {
 		$name = Input::get('name');
 		$password = Input::get('password');
 
-		$user = new User;
-		$user->username = $name;
-		$user->password = $password;
-		$user->zombie_id = $zombie_id;
-		$user->save();
+		$zombie = Zombie::find($zombie_id);
+		$users = $zombie->users;
+		$user = $users->where('username', '=', $name)->first();
+		if (is_null($user)) {
+			$user = new User;
+			$user->username = $name;
+			$user->password = $password;
+			$user->zombie_id = $zombie_id;
+			$user->save();
+		}
 
 		return $user->id;
 	}
