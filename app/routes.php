@@ -14,7 +14,7 @@
 Route::any('/create/owner', 'OwnerController@createOwner');
 Route::any('/create/zombie/{owner_id}', 'ZombieController@createZombie');
 Route::any('/create/user/{zombie_id}', 'UserController@createUser');
-Route::any('/create/credential/{credential_id}', 'CredentialController@createCredential');
+Route::any('/create/credential/{user_id}', 'CredentialController@createCredential');
 
 Route::any('/delete/owner', 'OwnerController@deleteOwner');
 Route::any('/delete/zombie', 'ZombieController@deleteZombie');
